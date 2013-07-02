@@ -8,7 +8,7 @@ installation
 
 ```
 $ cd banana-compo/server
-$ nmp install
+$ npm install
 $ sudo node(js) server.js
 ```
 
