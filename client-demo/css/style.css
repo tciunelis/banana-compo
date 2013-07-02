@@ -1,0 +1,42 @@
+.buzzer {
+    width: 200px;
+    height: 420px;
+    border: 1px solid;
+    float: left;
+    margin: 10px;
+}
+
+    .buzzer .button {
+        border: 1px solid;
+        width: 180px;
+        height: 40px;
+        float: left;
+        margin: 10px;
+    }
+
+        .buzzer .button.red {
+            height: 140px;
+            background-color: red;
+        }
+
+        .buzzer .button.blue {
+            background-color: blue;
+        }
+
+        .buzzer .button.orange {
+            background-color: #ff8c00;
+        }
+
+        .buzzer .button.green {
+            background-color: #006400;
+        }
+
+        .buzzer .button.yellow {
+            background-color: #ffff00;
+        }
+
+
+        .buzzer .button span {
+            text-align: center;
+            display: block;
+        }

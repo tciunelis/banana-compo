@@ -1,4 +1,5 @@
 banana-compo
 ============
 
-Banana Compo
+Banana Compo - Sony Buzzers WebSocket server
+

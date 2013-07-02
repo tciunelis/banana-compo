@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <script src="js/jquery-2.0.2.min.js"></script>
+        <script src="js/socket.io/socket.io.js"></script>
+        <script src="js/buzzers.js"></script>
+        <script>
+            var buzzers = new Buzzers(io, 'http://localhost:8080');
+
+            buzzers.on('controllersCount', function(controllersCount){
+                console.log('controllersCount', controllersCount);
+                if (controllersCount == 1) {
+                    $('.controller-1').hide();
+                }
+            });
+
+            buzzers.on('buttonPressed', function(buzzer) {
+                console.log(buzzer);
+                $('#' + buzzer.getId() + ' .' + buzzer.getLastPressedButton()).animate({opacity: .2}).animate({opacity: 1});
+            }, false);
+
+            buzzers.on('buttonReleased', function(buzzer) {
+                console.log('button')
+            }, false);
+
+        </script>
+
+        <div id="controller-0-buzzer-0" class="buzzer controller-0">
+            <div class="button red"><span>Buzzer no. 0</span></div>
+            <div class="button blue"></div>
+            <div class="button orange"></div>
+            <div class="button green"></div>
+            <div class="button yellow"></div>
+        </div>
+
+        <div id="controller-0-buzzer-1" class="buzzer controller-0">
+            <div class="button red"><span>Buzzer no. 1</span></div>
+            <div class="button blue"></div>
+            <div class="button orange"></div>
+            <div class="button green"></div>
+            <div class="button yellow"></div>
+        </div>
+
+        <div id="controller-0-buzzer-2" class="buzzer controller-0">
+            <div class="button red"><span>Buzzer no. 2</span></div>
+            <div class="button blue"></div>
+            <div class="button orange"></div>
+            <div class="button green"></div>
+            <div class="button yellow"></div>
+        </div>
+
+        <div id="controller-0-buzzer-3" class="buzzer controller-0">
+            <div class="button red"><span>Buzzer no. 3</span></div>
+            <div class="button blue"></div>
+            <div class="button orange"></div>
+            <div class="button green"></div>
+            <div class="button yellow"></div>
+        </div>
+
+        <div id="controller-1-buzzer-0" class="buzzer controller-1">
+            <div class="button red"><span>Buzzer no. 0</span></div>
+            <div class="button blue"></div>
+            <div class="button orange"></div>
+            <div class="button green"></div>
+            <div class="button yellow"></div>
+        </div>
+
+        <div id="controller-1-buzzer-1" class="buzzer controller-1">
+            <div class="button red"><span>Buzzer no. 1</span></div>
+            <div class="button blue"></div>
+            <div class="button orange"></div>
+            <div class="button green"></div>
+            <div class="button yellow"></div>
+        </div>
+
+        <div id="controller-1-buzzer-2" class="buzzer controller-1">
+            <div class="button red"><span>Buzzer no. 2</span></div>
+            <div class="button blue"></div>
+            <div class="button orange"></div>
+            <div class="button green"></div>
+            <div class="button yellow"></div>
+        </div>
+
+        <div id="controller-1-buzzer-3" class="buzzer controller-1">
+            <div class="button red"><span>Buzzer no. 3</span></div>
+            <div class="button blue"></div>
+            <div class="button orange"></div>
+            <div class="button green"></div>
+            <div class="button yellow"></div>
+        </div>
+
+    </body>
+</html>

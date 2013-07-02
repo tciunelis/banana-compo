@@ -1,0 +1,26 @@
+{
+    "name": "banana-compo-server",
+    "version": "1.0.0",
+    "description": "node.js banana-compo buzzers server",
+    "license": "MIT/X11",
+    "author": {
+        "name": "Tytus Ciunelis",
+        "email": "tytus.ciunelis@gmail.com",
+        "url": "https://github.com/tciunelis/banana-compo"
+    },
+    "keywords": [
+        "buzzers",
+        "WebSocket",
+        "competition"
+    ],
+    "dependencies": {
+        "socket.io": "~0.9",
+        "node-hid":  "0.2.3"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    },
+    "scripts": {
+        "install": "sh install.sh"
+    }
+}
