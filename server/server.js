@@ -19,18 +19,19 @@ for (var i = 0; i < config.devices.length; i++) {
     try {
         console.log('Init buzzer: ', config.devices[i]);
         buzzersControllers[i] = new buzzers.BuzzerController(config.devices[i], i);
-  	    buzzersControllers[i].on('button', function (buzzer) {
+  	    buzzersControllers[i].on('buttonPressed', function (buzzer) {
   	        console.log('buzzer pressed: ', buzzer);
         });
     } catch (e) {
         console.log('No buzzers at ', config.devices[i]);
-    } finally {
-        if (buzzersControllers.length == 0) {
-            throw new Error("No Buzzer controllers could be found");
-        }
-    }
+    } 
+        
 }
 
+if (buzzersControllers.length == 0) {
+    throw new Error("No Buzzer controllers could be found");
+}
+  
 /*
  * Server part
  */
